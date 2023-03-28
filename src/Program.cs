@@ -17,8 +17,9 @@ namespace AcuriteInterceptorApi
 			{
 				builder.Services.AddSwaggerGen();
 			}
+			var connectionString = Environment.GetEnvironmentVariable("ConnectionString");
 			builder.Services.AddDbContext<WeatherDbContext>(options =>
-				options.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionString")));
+				options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 			var app = builder.Build();
 
 			if (Boolean.Parse(Environment.GetEnvironmentVariable("SwaggerEnabled")!))

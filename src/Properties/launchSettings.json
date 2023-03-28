@@ -15,7 +15,7 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
-        "ConnectionString": "Data Source=192.168.0.251;Database=Weather;User ID=weather;Password=Weather0;Encrypt=False",
+        "ConnectionString": "Data Source=192.168.0.251;Database=Weather;User ID=weather;Password=Weather0",
         "ConsoleOutputEnabled": "true",
         "DatabaseEnabled": "true",
         "FilterOutSeconds": "300",
